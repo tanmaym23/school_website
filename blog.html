@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css ">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Blogs</title>
+</head>
+
+<body>
+        <!--nav bar-->
+        <nav>
+            <img src="images/logo.svg" alt="">
+            <div class="navigation">
+                <ul>
+                    <i id="menu-close" class="fas fa-times"></i>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a class="active" href="blog.html">Blog</a></li>
+                    <li><a href="course.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <img id="menu-btn"  src="images/menu.png" alt="">
+            </div>
+        </nav>
+
+        <!-- home -->
+        <section id="about-home">
+            <h2>Blogs/</h2>
+        </section>
+
+        <!-- blog -->
+        <section id="blog-container">
+            
+            <div id="slider" style="height: 300px; overflow: hidden;"></div>
+                <div class="blog">
+                    <div class="post">
+                        <img src="images/b1.jpg" alt="">
+                        <h3>Learn Web Dev in easiest way!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius unde iusto at soluta aliquam nesciunt maxime nihil, eum veritatis accusamus laborum iste commodi voluptatum officiis! Adipisci veritatis optio asperiores doloribus.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                    <div class="post">
+                        <img src="images/b4.png" alt="">
+                        <h3>Learn Web Dev in easiest way!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius unde iusto at soluta aliquam nesciunt maxime nihil, eum veritatis accusamus laborum iste commodi voluptatum officiis! Adipisci veritatis optio asperiores doloribus.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                    <div class="post">
+                        <img src="images/b2.jpg" alt="">
+                        <h3>Learn Web Dev in easiest way!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius unde iusto at soluta aliquam nesciunt maxime nihil, eum veritatis accusamus laborum iste commodi voluptatum officiis! Adipisci veritatis optio asperiores doloribus.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                    <div class="post">
+                        <img src="images/b3.jpg" alt="">
+                        <h3>Learn Web Dev in easiest way!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius unde iusto at soluta aliquam nesciunt maxime nihil, eum veritatis accusamus laborum iste commodi voluptatum officiis! Adipisci veritatis optio asperiores doloribus.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cat">
+                <h2>Catagories</h2>
+                <hr>
+                <a href="#">Web Development</a>
+                <hr>
+                <hr>
+                <a href="#">Web Design</a>
+                <hr>
+                <hr>
+                <a href="#">App Development</a>
+                <hr>
+                <hr>
+                <a href="#">Frontend Web</a>
+                <hr>
+                <hr>
+                <a href="#">Python</a>
+                <hr>
+                <hr>
+                <a href="#">JavaScript Hack</a>
+                <hr>
+            </div>
+        </section>
+
+        <!-- footer -->
+    <footer>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li>Power Tools</li>
+            <li>Managed Website</li>
+            <li>Manage Reputation</li>
+            <li>Marketing Service</li>
+        </div>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li>Power Tools</li>
+            <li>Managed Website</li>
+            <li>Manage Reputation</li>
+            <li>Marketing Service</li>
+        </div>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li>Power Tools</li>
+            <li>Managed Website</li>
+            <li>Manage Reputation</li>
+            <li>Marketing Service</li>
+        </div>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li>Power Tools</li>
+            <li>Managed Website</li>
+            <li>Manage Reputation</li>
+            <li>Marketing Service</li>
+        </div>
+
+        <div class="footer-col">
+            <h3>News Letter</h3>
+            <p>You Can Trust us! We only send promo offers.</p>
+            <div class="subscribe">
+                <input type="text" placeholder="Your Email">
+                <a href="#" class="yellow">Subscribe</a>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>Copyright 2020 All Rights Reserved | Designed by <span>Tanmay</span></p>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>      
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        $('#menu-btn').click(function(){
+            $('nav .navigation ul').addClass('active');
+        })
+        $('#menu-close').click(function(){
+            $('nav .navigation ul').removeClass('active');
+        })
+    </script>
+    <script>
+        // Select all blog posts
+        var posts = document.querySelectorAll('.post');
+        
+        // Hide all posts initially
+        for (var i = 0; i < posts.length; i++) {
+            posts[i].style.display = 'none';
+        }
+        
+        // Show the first post
+        posts[0].style.display = 'block';
+        
+        // Current post index
+        var currentPost = 0;
+        
+        // Change post every 3 seconds
+        setInterval(function() {
+            // Hide current post
+            posts[currentPost].style.display = 'none';
+        
+            // Move to next post
+            currentPost = (currentPost + 1) % posts.length;
+        
+            // Show next post
+            posts[currentPost].style.display = 'block';
+        }, 3000);
+
+    </script>
+    
+</body>
+
+</html>
